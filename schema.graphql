@@ -1,0 +1,18 @@
+directive @rest (path: String!) on FIELD
+type Movie {
+    id: ID!
+    title: String
+    overview: String
+    poster_path: String
+    release_date: String
+    vote_average: Float
+}
+type DiscoverMovies {
+    page: Int!
+    total_pages: Int!
+    total_results: Int!
+    results: [Movie]
+}
+type Query {
+    discoverMovies(page: Int, sortBy: String, query: String): DiscoverMovies
+}

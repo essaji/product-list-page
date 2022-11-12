@@ -7,7 +7,6 @@ const { publicRuntimeConfig: { API_HOST, API_KEY } } = getConfig()
 const restLink = new RestLink({
   uri: API_HOST,
   customFetch: (uri, options) => {
-    console.log(options);
     const finalUri = uri.toString().includes("?") ? `${uri}&api_key=${API_KEY}` : `${uri}?api_key=${API_KEY}`
     return fetch(finalUri)
   }
