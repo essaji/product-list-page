@@ -6,19 +6,15 @@ const ProductCard = (props: ProductCardProps) => {
   const starsCountArray = Array(5).fill(0).map((i, idx) => props.starCount > idx)
   const imageSrc = props.imageUrl ? (IMAGE_HOST + props.imageUrl) : "https://placehold.jp/500x800.png"
   return (
-    <div className="overflow-hidden rounded-lg shadow-lg min-h-full">
-
-      <a href="#">
-        <Image
-          alt="Placeholder"
-          className="block h-auto w-full"
-          src={imageSrc}
-          width={500}
-          height={800}
-        />
-      </a>
-
-      <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+    <div className="flex flex-col overflow-hidden rounded-lg shadow-lg min-h-full">
+      <Image
+        alt="Placeholder"
+        className="block h-auto w-full"
+        src={imageSrc}
+        width={500}
+        height={800}
+      />
+      <header className="flex flex-col md:flex-row items-center justify-between leading-tight p-2 md:p-4">
         <h1 className="text-lg">
           <a className="no-underline hover:underline text-black" href="#">
             {props.title}
@@ -37,7 +33,7 @@ const ProductCard = (props: ProductCardProps) => {
         </div>
       </header>
 
-      <footer className="flex items-center justify-end leading-none p-2 md:p-4">
+      <footer className="flex items-center justify-end leading-none p-2 md:p-4 mt-auto">
         <p className="text-grey-darker text-sm">
           Release Date: {props.date}
         </p>
