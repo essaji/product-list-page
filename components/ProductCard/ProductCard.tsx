@@ -15,10 +15,8 @@ const ProductCard = (props: ProductCardProps) => {
         height={800}
       />
       <header className="flex flex-col md:flex-row items-center justify-between leading-tight p-2 md:p-4">
-        <h1 className="text-lg">
-          <a className="no-underline hover:underline text-black" href="#">
-            {props.title}
-          </a>
+        <h1 className="text-base text-center md:text-left">
+          {props.title}
         </h1>
         <div className="flex items-center">
           {starsCountArray.map((isStar, idx) => (
@@ -33,8 +31,8 @@ const ProductCard = (props: ProductCardProps) => {
         </div>
       </header>
 
-      <footer className="flex items-center justify-end leading-none p-2 md:p-4 mt-auto">
-        <p className="text-grey-darker text-sm">
+      <footer className="flex items-center justify-center md:justify-end leading-none p-2 md:p-4 mt-auto">
+        <p className="text-grey-darker text-xs">
           Release Date: {props.date}
         </p>
       </footer>
