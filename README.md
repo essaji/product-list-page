@@ -6,7 +6,7 @@
 ```shell
 export IMAGE_HOST_URL=https://image.tmdb.org/t/p/w500
 export API_HOST=https://api.themoviedb.org/3/
-export API_KEY=***************************
+export API_KEY=12c6aac2e0b2882014fed1e8ddf0cfe4
 ```
 * Then run:
 ```shell
