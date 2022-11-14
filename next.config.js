@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   publicRuntimeConfig: {
     API_HOST: process.env.API_HOST,
-    IMAGE_HOST: process.env.IMAGE_HOST_URL,
+    IMAGE_HOST: process.env.IMAGE_HOST_URL || "http://fake-image-host.com",
     API_KEY: process.env.API_KEY
   },
   images: {

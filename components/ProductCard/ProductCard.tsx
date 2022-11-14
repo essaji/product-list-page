@@ -21,7 +21,7 @@ const ProductCard = (props: ProductCardProps) => {
         <div className="flex items-center">
           {starsCountArray.map((isStar, idx) => (
             <svg data-testid="star-item" key={idx} aria-hidden="true"
-                 className={`w-5 h-5 ${isStar ? "text-yellow-400" : "dark:text-gray-500"}`} fill="currentColor"
+                 className={`w-5 h-5 ${isStar ? "text-yellow-400" : "text-gray-500"}`} fill="currentColor"
                  viewBox="0 0 20 20"
                  xmlns="http://www.w3.org/2000/svg"><title>First star</title>
               <path
